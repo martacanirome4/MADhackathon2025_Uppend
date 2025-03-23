@@ -1,3 +1,4 @@
+// src/contexts/QubicConnectContext.jsx
 /* global BigInt */
 
 import React, {createContext, useContext, useEffect, useState} from "react"
@@ -166,6 +167,7 @@ export function QubicConnectProvider({ children }) {
                     qHelper.getIdentity(decodedTx.destinationPublicKey.getIdentity())
                 ])
 
+                
                 const payloadBase64 = decodedTx.payload
                     ? uint8ArrayToBase64(decodedTx.payload.getPackageData())
                     : null
@@ -187,18 +189,50 @@ export function QubicConnectProvider({ children }) {
         }
     }
 
+    const invokeContractProcedure = async (contractId, procedureIndex, inputObject, rewardAmount) => {
+        try {
+            const tick = await getTick(); // 🕒 Necesario para transacción válida
+            const payload = qHelper.encodeProcedurePayload(procedureIndex, inputObject); // Codifica input
+    
+            const tx = await qHelper.createTransaction({
+                sourcePrivateKey: wallet.privateKey,
+                destinationContractId: contractId,
+                payload,
+                reward: BigInt(rewardAmount),  // ⚠️ Asegúrate que sea BigInt
+                tick,
+            });
+    
+            // Firmar con método ya incluido
+            const signedTx = await signTransaction(tx);
+    
+            // Broadcast usando función que ya tienes
+            const result = await broadcastTx(signedTx);
+    
+            if (!result || !result.transactionHash) {
+                throw new Error('Broadcast failed');
+            }
+    
+            return result.transactionHash; // Retorna hash usable
+        } catch (error) {
+            console.error('invokeContractProcedure error:', error);
+            throw error;
+        }
+    };
+    
+
     return (
         <QubicConnectContext.Provider
             value={{
                 connected,
                 wallet,
                 showConnectModal,
-                connect,
+                connect, 
                 disconnect,
                 toggleConnectModal,
                 signTransaction,
                 getTick,
-                broadcastTx
+                broadcastTx,
+                invokeContractProcedure // 👈 Añadimos la función a nuestro contexto
             }}
         >
             {children}

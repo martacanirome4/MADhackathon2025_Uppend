@@ -1,7 +1,9 @@
+// src/pages/StartPage.jsx
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQubicConnect } from '../contexts/QubicConnectContext'
 import { useHM25 } from '../contexts/HM25Context'
+import { QubicHelper } from 'qubic-ts-library/dist/qubicHelper'
 
 function StartPage() {
     const navigate = useNavigate()
@@ -46,6 +48,13 @@ function StartPage() {
                     title={isDisabled ? 'Insufficient balance to burn coins.' : ''}
                 >
                     Burn Coin
+                </button>
+                {/* Añadir botón para ir a la página de contrato */}
+                <button
+                    className="bg-primary-40 p-3 text-black rounded"
+                    onClick={() => navigate('/contract')}
+                >
+                    Create Contract
                 </button>
             </div>
             <div className="mt-8 p-4 bg-gray-800 rounded-lg border border-gray-700 text-white">

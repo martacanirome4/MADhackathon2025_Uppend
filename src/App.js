@@ -7,6 +7,7 @@ import Footer from './components/layout/Footer'
 import StartPage from './pages/StartPage'
 import EchoPage from './pages/EchoPage'
 import BurnPage from './pages/BurnPage'
+import ContractPage from './pages/ContractPage' // Importar la página de contrato
 import {Toaster} from 'react-hot-toast'
 import {ConfigProvider} from "./contexts/ConfigContext"
 
@@ -31,6 +32,8 @@ function App() {
                                 <Route path="/" element={<StartPage/>}/>
                                 <Route path="/echo" element={<EchoPage/>}/>
                                 <Route path="/burn" element={<BurnPage/>}/>
+                                /* Añadir la ruta para la página de contrato */
+                                <Route path="/contract" element={<ContractPage/>}/>
                             </Routes>
                             <Toaster
                                 position="top-right"
