@@ -1,15 +1,15 @@
-import { QubicPackageType } from "./qubic-communication/QubicPackageType";
-import { ReceivedPackage } from "./qubic-communication/ReceivedPackage";
-import { RequestResponseHeader } from "./qubic-communication/RequestResponseHeader";
-import net from 'net';
-import { QubicTickInfo } from "./qubic-types/QubicTickInfo";
-import { QubicEntityResponse } from "./qubic-communication/QubicEntityResponse";
-import { PublicKey } from "./qubic-types/PublicKey";
-import { QubicPackageBuilder } from "./QubicPackageBuilder";
-import { QubicEntityRequest } from "./qubic-communication/QubicEntityRequest";
-import crypto from './crypto';
-import { KeyHelper } from "./keyHelper";
-import { QubicHelper } from 'qubic-ts-library/dist/qubicHelper'
+import { QubicPackageType } from "@qubic-lib/qubic-ts-library/dist/qubic-communication/QubicPackageType";
+import { ReceivedPackage } from "@qubic-lib/qubic-ts-library/dist/qubic-communication/ReceivedPackage";
+import { RequestResponseHeader } from "@qubic-lib/qubic-ts-library/dist/qubic-communication/RequestResponseHeader";
+import { QubicTickInfo } from "@qubic-lib/qubic-ts-library/dist/qubic-types/QubicTickInfo";
+import { QubicEntityResponse } from "@qubic-lib/qubic-ts-library/dist/qubic-communication/QubicEntityResponse";
+import { PublicKey } from "@qubic-lib/qubic-ts-library/dist/qubic-types/PublicKey";
+import { QubicPackageBuilder } from "@qubic-lib/qubic-ts-library/dist/QubicPackageBuilder";
+import { QubicEntityRequest } from "@qubic-lib/qubic-ts-library/dist/qubic-communication/QubicEntityRequest";
+import { KeyHelper } from "@qubic-lib/qubic-ts-library/dist/keyHelper";
+import crypto from "@qubic-lib/qubic-ts-library/dist/crypto";
+import net from "net";
+
 
 class QubicConnector {
     constructor() {
