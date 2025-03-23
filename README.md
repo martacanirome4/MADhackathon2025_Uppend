@@ -1,3 +1,9 @@
+# Madrid Hackathon 2025 - Team 25 (UppEnd) Front End
+
+This component allows users to create a **supply contract on Qubic** by encoding contract details into a transaction payload and broadcasting it to the Qubic network. It dynamically calculates payment and delivery dates, builds a custom payload, signs the transaction, and handles broadcasting with feedback.
+
+The **frontend** component allows users to create a supply contract on Qubic by entering details like name, counterparty ID, amount, and dates. It builds and broadcasts the transaction, displaying real-time status updates.
+
 # Getting Started with Qubic Hackathon Madrid 2025 Demo App
 
 
