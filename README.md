@@ -7,7 +7,7 @@
 ![Hackathon](https://img.shields.io/badge/event-MADhackathon2025-purple)
 
 <div align="center">
-  <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" height="180" alt="blockchain gif" />
+  <img src="https://media.giphy.com/media/MFabj1E9mgUsqwVWHu/giphy.gif?cid=790b76110rgp8za77dbz2p19n24ik9xbfac96blk8d1fhxii&ep=v1_gifs_search&rid=giphy.gif&ct=g" height="180" alt="blockchain gif" />
 </div>
 
 ## 🚀 Overview
@@ -44,7 +44,7 @@ Built on the decentralized network **Qubic**, the app provides a secure, transpa
 - The frontend is based on the official hackathon demo:  
   🔗 [hm25-frontend (demo base)](https://github.com/icyblob/hm25-frontend)
 
-- Smart contract provided by Qubic for contract management:  
+- Smart contract template provided by Qubic:  
   🔗 [team25 - Smart Contract](https://github.com/martacanirome4/team25)
 
 - Official MADhackathon 2025 repository and resources:  
