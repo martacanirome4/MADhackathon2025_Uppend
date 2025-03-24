@@ -1,117 +1,78 @@
-# Madrid Hackathon 2025 - Team 25 (UppEnd) Front End
+# ⚡ Uppend – Supply Contract Management on Blockchain (MADhackathon 2025)
 
-This component allows users to create a **supply contract on Qubic** by encoding contract details into a transaction payload and broadcasting it to the Qubic network. It dynamically calculates payment and delivery dates, builds a custom payload, signs the transaction, and handles broadcasting with feedback.
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![React](https://img.shields.io/badge/frontend-React-blue)
+![Blockchain](https://img.shields.io/badge/blockchain-Qubic-orange)
+![Hackathon](https://img.shields.io/badge/event-MADhackathon2025-purple)
 
-The **frontend** component allows users to create a supply contract on Qubic by entering details like name, counterparty ID, amount, and dates. It builds and broadcasts the transaction, displaying real-time status updates.
+<div align="center">
+  <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" height="180" alt="blockchain gif" />
+</div>
 
-# Getting Started with Qubic Hackathon Madrid 2025 Demo App
+## 🚀 Overview
 
+**Uppend** is a project developed during **MADhackathon 2025**, designed to enable energy suppliers and buyers to **create, sign, and manage supply contracts on blockchain**.  
+Built on the decentralized network **Qubic**, the app provides a secure, transparent, and user-friendly platform for formalizing payment and delivery agreements.
 
-## Getting started
+---
 
-In the project directory, you can run:
+## 🎯 Key Features
 
-### `pnpm install`
+- 📄 Generate supply contracts with essential data (payment and delivery dates, amounts).
+- 🔐 Digital signing and validation through the Qubic blockchain.
+- 🚀 Secure, traceable transactions with real-time feedback.
+- 📱 Interactive frontend built with React and responsive design.
+- 💾 Local persistence and overview of active contracts.
 
-Install the web app's dependencies
+---
 
-### `pnpm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Technology    | Description                                  |
+|---------------|----------------------------------------------|
+| React         | Interactive frontend                         |
+| Qubic SDK     | Blockchain integration and contract signing  |
+| HTML/CSS      | Responsive UI design                         |
+| JavaScript    | Business logic and event handling            |
+| GitHub        | Version control and collaboration            |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `pnpm run build`
+## 📚 Credits & Resources
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The frontend is based on the official hackathon demo:  
+  🔗 [hm25-frontend (demo base)](https://github.com/icyblob/hm25-frontend)
 
-## Prepare Your Web App for Production
+- Smart contract provided by Qubic for contract management:  
+  🔗 [team25 - Smart Contract](https://github.com/martacanirome4/team25)
 
-### `ssh user@your_server_ip`
-Log in to your server via SSH.
-Replace user with your SSH `username` and `your_server_ip` with your server’s IP address.
+- Official MADhackathon 2025 repository and resources:  
+  🔗 [Hackathon Madrid - Qubic](https://github.com/qubic/hackathon-madrid)
 
-### Install Nginx
+---
 
-```bash
-sudo apt update
-sudo apt install nginx
-```
+## 🔗 About Qubic
 
-### Start and enable Nginx
+**Qubic** is a next-generation blockchain enabling fast, decentralized, and secure smart contract execution.  
+For **MADhackathon 2025**, Qubic provided a real blockchain environment to power impactful solutions in sectors such as energy, traceability, and logistics.
 
-```bash
-sudo systemctl start nginx
-sudo systemctl enable nginx
-```
+> Its modular approach and simple API allow developers to integrate blockchain features seamlessly.
 
-### Transfer Your Files to the Server
+More info: 🌐 [qubic.org](https://qubic.org/)
 
-In your server, create the directory that your web app will be stored to
-```bash
-sudo mkdir -p /var/www/myapp
-sudo chown -R www-data:www-data /var/www/myapp
-sudo chmod -R 755 /var/www/myapp
-```
+---
 
-In your local machine, use either `scp` or `rsync` to securely transfer your app’s files to the server.
+## 🏆 Hackathon Context
 
-```bash
-scp -r build/* user@your_server_ip:/var/www/myapp
-```
+This project was created in **48 hours** during **MADhackathon 2025**, aimed at delivering decentralized, impactful solutions for the energy sector.
 
-### Configure nginx
+---
 
-```bash
-sudo vim /etc/nginx/sites-available/myapp
-```
+## 👥 Team
 
-Copy the below configurations, adjust as needed:
-```bash
-server {
-    listen 8081;
-    server_name <your_server_ip>;
-
-    root /var/www/myapp;
-    index index.html;
-
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
-}
-```
-
-### Enable the configurations
-
-```bash
-sudo ln -s /etc/nginx/sites-available/myapp /etc/nginx/sites-enabled/
-```
-### Test and reload nginx
-
-```bash
-sudo nginx -t
-sudo systemctl reload nginx
-```
-
-Open the app through http://<your_server_ip>:8081
-
-### Conenct to core node server
-
-If you have already launched the node with <node_ip>, try to connect it with our frontend. 
-Open the ConnectLink at the top right of the app, select Connect to Server, add your node url:
-
-```bash
-http://<node_ip>
-```
-Then refresh the page
-
-### Troubleshooting
-Check Nginx error logs if something goes wrong
-
-```bash
-sudo cat /var/log/nginx/error.log
-```
-
+- Rafael Godoy Guía 
+- Oscarina Hernández García 
+- Mario López García 
+- Jesús Alejandro Hernández Méndez 
+- Marta Canino Romero  
