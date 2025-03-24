@@ -6,10 +6,6 @@
 ![Blockchain](https://img.shields.io/badge/blockchain-Qubic-orange)
 ![Hackathon](https://img.shields.io/badge/event-MADhackathon2025-purple)
 
-<div align="center">
-  <img src="https://media.giphy.com/media/MFabj1E9mgUsqwVWHu/giphy.gif?cid=790b76110rgp8za77dbz2p19n24ik9xbfac96blk8d1fhxii&ep=v1_gifs_search&rid=giphy.gif&ct=g" height="180" alt="blockchain gif" />
-</div>
-
 ## 🚀 Overview
 
 **Uppend** is a project developed during **MADhackathon 2025**, designed to enable energy suppliers and buyers to **create, sign, and manage supply contracts on blockchain**.  
