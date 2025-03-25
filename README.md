@@ -42,7 +42,7 @@ Built on **Qubic’s decentralized DAG network**, Uppend ensures formalized agre
 - Frontend base:  
   🔗 [hm25-frontend (hackathon demo)](https://github.com/icyblob/hm25-frontend)
 
-- Smart Contract (branch **madrid-2025-local** - based on HM25 Qubic template):  
+- Smart Contract (branch **madrid-2025-local** | based on HM25 Qubic template | path: src/contracts/**HM25.h**):  
   🔗 [team25 – Smart Contract](https://github.com/martacanirome4/team25)
 
 - Hackathon Repo & Resources:  
